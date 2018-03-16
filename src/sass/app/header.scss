@@ -1,0 +1,42 @@
+.thnr {
+  &__header {
+    background: rgba(0,0,0,.6);
+    border-bottom: 1px solid #999;
+    height: 120px;
+    color: $color-white;
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    text-align: center;
+
+  }
+  &__main-logo {
+    display: inline-block;
+    line-height: 120px;
+    font-family: 'Homework', 'Annie Use Your Telescope', cursive;
+    font-size: 80px;
+    color: $color-basic-red;
+    text-align: center;
+    vertical-align: middle;
+    margin: 0 100px;
+  }
+  &__main-nav {
+    display: inline-block;
+    vertical-align: middle;
+    padding-top: 40px;
+  }
+  &__nav-button {
+    display: inline-block;
+    border: 1px solid #999;
+    font-size: 14px;
+    margin: 5px 25px;
+    padding: 7px 25px;
+    font-weight: 500;
+    border-radius: 15px;
+    font-family: 'Montserrat', sans-serif;;
+    text-transform: uppercase;
+  }
+}

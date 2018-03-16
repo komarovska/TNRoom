@@ -1,5 +1,5 @@
 (() => {
 
-    $('body').append('<div>jQuery works!:)</div>');
+    // $('body').append('<div>jQuery works!:)</div>');
 
 })();

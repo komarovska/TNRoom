@@ -1,5 +1,8 @@
 @import 'common/reset';
+@import 'common/variables.scss';
 @import 'common/mixins';
 @import 'common/components';
 
-@import 'app/main-page';
+@import "common/buttons.css";
+@import 'app/header.scss';
+@import 'app/main-page.scss';

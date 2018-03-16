@@ -1,0 +1,58 @@
+
+@import url('https://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=cyrillic,cyrillic-ext');
+@font-face {
+  font-family: Homework; /* Имя шрифта */
+  src: url(../fonts/homework.ttf); /* Путь к файлу со шрифтом */
+}
+
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: $color-black;
+  * {
+    box-sizing: border-box;
+  }
+}
+
+.clearfix {
+  clear: both;
+}
+
+.thnr {
+  &__content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  &__page {
+    background-color: $color-black;
+    color: $color-white;
+    min-height: 100%;
+  }
+  &__bottom-anchor {
+    position: absolute;
+    bottom: 10px;
+    font-size: 30px;
+    text-align: center;
+    left: 50%;
+    margin: -10px;
+    width: 20px;
+    border: 20px solid transparent;	border-top: 20px solid rgba(255,255,255,0.5);
+    -webkit-animation: mymove 2s infinite;
+    animation: mymove 1s infinite;
+  }
+
+  @-webkit-keyframes mymove {
+    0%   {bottom: 10px;}
+    100% {bottom: 5px;}
+  }
+
+  @keyframes mymove {
+    0%   {bottom: 10px;}
+    100% {bottom: 5px;}
+  }
+
+}

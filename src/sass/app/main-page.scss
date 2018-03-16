@@ -1,8 +1,71 @@
-html,
-body {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  background-color: lightgray;
-  direction: rtl;
+.thnr {
+  &__main-page {
+    color: #999;
+  }
+  &__main-photo-wrap {
+    margin-top: 20px;
+    //background-color: #aaa;
+    width: 50%;
+    float: left;
+    margin: 0 auto;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  &__main-photo {
+    width: 150%;
+    height: 100%;
+    background: url("../img/22.jpg");
+    background-size: 150%;
+    background-repeat: no-repeat;
+    background-position: 60% 50%;
+  }
+  &__main-photo-shadow{
+    position: absolute;
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+    box-shadow: inset -30px 0px 100px 50px $color-black;
+    top: 0;
+    left: 0;
+  }
+  &__main-text-wrap {
+    width: 50%;
+    float: right;
+    position: relative;
+    height: 100%;
+  }
+  &__main-quote {
+    position: absolute;
+    bottom: 100px;
+    width: 100%;
+    padding-left: 20%;
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    text-align: right;
+    padding-right: 30px;
+  }
+
+  &__quote-author {
+    text-align: right;
+    padding-right: 30px;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+
+  &__quote-message {
+    text-align: center;
+  }
+
+  &__info-block {
+    padding-top: 10px;
+    margin-top: 40px;
+    display: inline-block;
+    font-size: 12px;
+    text-align: right;
+    width: 60%;
+    border-top: 2px solid $color-basic-red ;
+  }
+
 }
