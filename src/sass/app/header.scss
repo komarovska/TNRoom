@@ -1,9 +1,9 @@
 .thnr {
+
   &__header {
     background: rgba(0,0,0,.6);
     border-bottom: 1px solid #999;
-    height: 120px;
-    color: $color-white;
+    padding: 5px 0;
     position: absolute;
     z-index: 1000;
     top: 0;
@@ -11,32 +11,31 @@
     display: block;
     width: 100%;
     text-align: center;
-
   }
   &__main-logo {
     display: inline-block;
-    line-height: 120px;
+    line-height: 60px;
     font-family: 'Homework', 'Annie Use Your Telescope', cursive;
-    font-size: 80px;
+    font-size: 40px;
     color: $color-basic-red;
     text-align: center;
+    width: 28%;
     vertical-align: middle;
-    margin: 0 100px;
   }
   &__main-nav {
     display: inline-block;
     vertical-align: middle;
-    padding-top: 40px;
+    width: 70%;
+    text-align: right;
+    padding-right: 5%;
   }
-  &__nav-button {
+  &__header-phone {
     display: inline-block;
-    border: 1px solid #999;
-    font-size: 14px;
-    margin: 5px 25px;
-    padding: 7px 25px;
-    font-weight: 500;
-    border-radius: 15px;
-    font-family: 'Montserrat', sans-serif;;
-    text-transform: uppercase;
+    vertical-align: middle;
+    padding: 10px;
+    text-align: left;
+    font-size: 12px;
+    margin: 5px;
+    letter-spacing: 2px;
   }
 }

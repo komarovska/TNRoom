@@ -4,5 +4,8 @@
 @import 'common/components';
 
 @import "common/buttons.css";
+@import "common/_all.scss";
 @import 'app/header.scss';
 @import 'app/main-page.scss';
+
+@import 'app-mobile.scss';

@@ -29,8 +29,20 @@ body {
   }
   &__page {
     background-color: $color-black;
-    color: $color-white;
     min-height: 100%;
+  }
+  .button {
+    display: inline-block;
+    border: 1px solid #999;
+    font-size: 12px;
+    margin: 5px 3%;
+    padding: 7px 25px;
+    font-weight: 500;
+    border-radius: 15px;
+    text-transform: uppercase;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
   }
   &__bottom-anchor {
     position: absolute;
