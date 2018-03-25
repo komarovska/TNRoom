@@ -1,0 +1,321 @@
+@import url(https://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope);@import url(https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=cyrillic,cyrillic-ext);@import url(https://fonts.googleapis.com/css?family=Comfortaa:300,400,700&subset=cyrillic);/* Box colors */
+.bg-1 {
+	background: #ECEFF1;
+	color: #37474f;
+}
+.bg-2 {
+	background: #7986cb;
+	color: #ECEFF1;
+}
+.bg-3 {
+	background: #37474f;
+	color: #dcc;
+}
+
+/* Common button styles */
+.button {
+	display: block;
+	background: none;
+	color: inherit;
+	vertical-align: middle;
+	position: relative;
+	z-index: 1;
+	-webkit-backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+	border-radius: 7px ;
+}
+.button:focus {
+	outline: none;
+}
+.button > span {
+	vertical-align: middle;
+}
+
+/* Text color adjustments (we could stick to the "inherit" but that does not work well in Safari) */
+.bg-1 .button {
+	color: #37474f;
+	border-color: #37474f;
+}
+.bg-2 .button {
+	color: #ECEFF1;
+	border-color: #ECEFF1;
+}
+.bg-3 .button {
+	color: #dcc;
+	border-color: #dcc;
+}
+
+
+/* Ujarak */
+.button--ujarak {
+	-webkit-transition: border-color 0.4s, color 0.4s;
+	transition: border-color 0.4s, color 0.4s;
+}
+.button--ujarak::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #dcc;
+	z-index: -1;
+	opacity: 0;
+	border-radius: inherit;
+	-webkit-transform: scale3d(0.7, 1, 1);
+	transform: scale3d(0.7, 1, 1);
+	-webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
+	transition: transform 0.4s, opacity 0.4s;
+	-webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+	transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.button--ujarak.button--round-s::before {
+	border-radius: inherit;
+}
+
+.button--ujarak,
+.button--ujarak::before {
+	-webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+	transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+.button--ujarak:hover {
+	color: #000;
+	border-color: transparent;
+}
+
+.button--ujarak:hover::before {
+	opacity: 1;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0; }
+
+@font-face {
+  font-family: Homework;
+  /* Имя шрифта */
+  src: url(24fc8589f136d8508831069d3756fd76.ttf);
+  /* Путь к файлу со шрифтом */ }
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: #000; }
+  html *,
+  body * {
+    box-sizing: border-box; }
+
+.clearfix {
+  clear: both; }
+
+.thnr__content {
+  max-width: 1200px;
+  margin: 0 auto; }
+
+.thnr__page {
+  background-color: #000;
+  min-height: 100%; }
+
+.thnr .button {
+  display: inline-block;
+  border: 1px solid #999;
+  font-size: 12px;
+  margin: 5px 3%;
+  padding: 7px 25px;
+  font-weight: 500;
+  border-radius: 15px;
+  text-transform: uppercase;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer; }
+
+.thnr__bottom-anchor {
+  position: absolute;
+  bottom: 10px;
+  font-size: 30px;
+  text-align: center;
+  left: 50%;
+  margin: -10px;
+  width: 20px;
+  border: 20px solid transparent;
+  border-top: 20px solid rgba(255, 255, 255, 0.5);
+  -webkit-animation: mymove 2s infinite;
+  animation: mymove 1s infinite; }
+
+@-webkit-keyframes mymove {
+  0% {
+    bottom: 10px; }
+  100% {
+    bottom: 5px; } }
+
+@keyframes mymove {
+  0% {
+    bottom: 10px; }
+  100% {
+    bottom: 5px; } }
+
+.thnr {
+  font-family: 'Montserrat', sans-serif;
+  color: #dcc; }
+
+.thnr__header {
+  background: rgba(0, 0, 0, 0.6);
+  border-bottom: 1px solid #999;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  text-align: center; }
+
+.thnr__main-logo {
+  display: inline-block;
+  line-height: 60px;
+  font-family: 'Homework', 'Annie Use Your Telescope', cursive;
+  font-size: 40px;
+  color: #d40000;
+  text-align: center;
+  width: 28%;
+  vertical-align: middle; }
+
+.thnr__main-nav {
+  display: inline-block;
+  vertical-align: middle;
+  width: 70%;
+  text-align: right;
+  padding-right: 5%; }
+
+.thnr__header-phone {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 10px;
+  text-align: left;
+  font-size: 12px;
+  margin: 5px;
+  letter-spacing: 2px; }
+
+.thnr__main-photo-wrap {
+  width: 50%;
+  float: left;
+  margin: 0 auto;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden; }
+
+.thnr__main-photo {
+  width: 150%;
+  height: 100%;
+  background: url(883ea7e8dd3f895ef67f8fa29129b5e3.jpg);
+  background-size: 150%;
+  background-repeat: no-repeat;
+  background-position: 60% 50%; }
+
+.thnr__main-photo-shadow {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  box-shadow: inset -30px 0px 100px 50px #000;
+  top: 0;
+  left: 0; }
+
+.thnr__main-text-wrap {
+  width: 50%;
+  float: right;
+  position: relative;
+  height: 100%; }
+
+.thnr__text-content {
+  position: absolute;
+  top: 35%;
+  padding-left: 25%;
+  width: 100%;
+  font-style: italic; }
+  .thnr__text-content .thnr__main-logo {
+    font-style: normal;
+    text-align: left;
+    font-size: 100px;
+    color: #c50d17;
+    width: 100%;
+    padding: 5px 30px 10px; }
+  .thnr__text-content .button-main {
+    font-size: 18px;
+    margin: 5px 3%;
+    padding: 14px 40px;
+    font-style: normal;
+    border-radius: 25px; }
+
+.thnr__main-btn-wrap {
+  text-align: center; }
+
+.thnr__main-quote {
+  position: absolute;
+  bottom: 40px;
+  width: 100%;
+  padding-left: 20%;
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
+  font-style: italic;
+  text-align: right;
+  padding-right: 30px; }
+
+.thnr__quote-author {
+  text-align: right;
+  padding-right: 30px;
+  font-size: 14px;
+  margin-top: 5px; }
+
+.thnr__quote-message {
+  text-align: right; }
+
+.thnr__info-block {
+  padding-top: 10px;
+  margin-top: 20px;
+  display: inline-block;
+  font-size: 12px;
+  text-align: right;
+  width: 60%;
+  border-top: 2px solid #d40000; }
+
+@media (max-width: 1200px) {
+  .thnr__text-content {
+    padding-left: 20%; }
+  .thnr__text-content .button-main {
+    margin: 5px 1%;
+    padding: 10px 35px; }
+  .thnr__text-content .thnr__main-logo {
+    font-size: 90px;
+    text-align: center;
+    padding: 0; }
+  .thnr__main-nav {
+    padding-right: 0; } }
+
+@media (max-width: 990px) {
+  .thnr__text-content .button-main {
+    margin: 5px 1%;
+    padding: 10px 30px;
+    font-size: 14px; }
+  .thnr__header .button {
+    margin: 5px 2%;
+    padding: 5px 20px; }
+  .thnr__text-content {
+    padding-left: 10%;
+    top: 30%; }
+    .thnr__text-content .thnr__main-logo {
+      font-size: 80px; }
+  .thnr__main-quote {
+    font-size: 16px; }
+  .thnr__quote-author {
+    padding-right: 0; }
+  .thnr__info-block {
+    width: 90%; }
+  .thnr__main-nav {
+    width: 74%; }
+  .thnr__main-logo {
+    width: 20%; } }
