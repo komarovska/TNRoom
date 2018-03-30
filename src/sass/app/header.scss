@@ -12,6 +12,9 @@
     width: 100%;
     text-align: center;
   }
+  &__header-burger {
+    display: none;
+  }
   &__main-logo {
     display: inline-block;
     line-height: 60px;
@@ -21,6 +24,10 @@
     text-align: center;
     width: 28%;
     vertical-align: middle;
+  }
+  &__main-nav-cont {
+    display: inline-block;
+    width: 100%;
   }
   &__main-nav {
     display: inline-block;
@@ -37,5 +44,12 @@
     font-size: 12px;
     margin: 5px;
     letter-spacing: 2px;
+  }
+  &__nav-button {
+    &.button {
+      margin: 5px 1%;
+      min-width: 120px;
+    }
+
   }
 }

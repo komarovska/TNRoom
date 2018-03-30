@@ -3,4 +3,7 @@
 .thnr {
   font-family: 'Montserrat', sans-serif;
   color: $color-pink;
+  &__page {
+    position: relative;
+  }
 }

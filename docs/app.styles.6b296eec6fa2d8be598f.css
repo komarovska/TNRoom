@@ -161,6 +161,8 @@ body {
 .thnr {
   font-family: 'Montserrat', sans-serif;
   color: #dcc; }
+  .thnr__page {
+    position: relative; }
 
 .thnr__header {
   background: rgba(0, 0, 0, 0.6);
@@ -174,6 +176,9 @@ body {
   width: 100%;
   text-align: center; }
 
+.thnr__header-burger {
+  display: none; }
+
 .thnr__main-logo {
   display: inline-block;
   line-height: 60px;
@@ -183,6 +188,10 @@ body {
   text-align: center;
   width: 28%;
   vertical-align: middle; }
+
+.thnr__main-nav-cont {
+  display: inline-block;
+  width: 100%; }
 
 .thnr__main-nav {
   display: inline-block;
@@ -199,6 +208,10 @@ body {
   font-size: 12px;
   margin: 5px;
   letter-spacing: 2px; }
+
+.thnr__nav-button.button {
+  margin: 5px 1%;
+  min-width: 120px; }
 
 .thnr__main-photo-wrap {
   width: 50%;
@@ -284,6 +297,50 @@ body {
   border-top: 2px solid #d40000; }
 
 @media (max-width: 1200px) {
+  .thnr__main-nav {
+    padding-right: 0; } }
+
+@media (max-width: 990px) {
+  .thnr__header .button {
+    margin: 5px 1%;
+    padding: 5px 15px;
+    min-width: 0; }
+  .thnr__main-nav {
+    width: 74%; }
+  .thnr__main-logo {
+    width: 20%; } }
+
+@media (max-width: 767px) {
+  .thnr__header {
+    position: fixed; }
+    .thnr__header:hover .thnr__main-nav {
+      display: block; }
+  .thnr__header-burger {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 15px; }
+  .thnr__main-logo {
+    display: block;
+    width: 100%;
+    line-height: 40px; }
+  .thnr__main-nav {
+    display: none;
+    margin: 0 auto; }
+  .thnr__nav-button.button {
+    display: block;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid #dcc;
+    font-size: 14px;
+    padding: 12px 0;
+    margin: 0; }
+  .thnr__main-nav-cont {
+    text-align: center; }
+  .thnr__nav-left {
+    width: 90%; } }
+
+@media (max-width: 1200px) {
   .thnr__text-content {
     padding-left: 20%; }
   .thnr__text-content .button-main {
@@ -292,18 +349,31 @@ body {
   .thnr__text-content .thnr__main-logo {
     font-size: 90px;
     text-align: center;
-    padding: 0; }
-  .thnr__main-nav {
-    padding-right: 0; } }
+    padding: 0; } }
+
+@media (max-device-width: 1024px) and (orientation: portrait) {
+  .thnr__content, .thnr__page, .thnr__main-photo-wrap, .thnr__main-text-wrap {
+    max-height: 768px;
+    min-height: 0; }
+  .thnr__main-photo {
+    background-position: 60% 10%; } }
+
+@media (max-device-width: 1366px) and (orientation: landscape) {
+  .thnr__main-photo {
+    background-size: 200%;
+    max-width: 175%;
+    background-position: 55% 50%; } }
+
+@media (max-device-width: 768px) and (orientation: portrait) {
+  .thnr__main-photo {
+    background-size: 200%;
+    max-width: 175%; } }
 
 @media (max-width: 990px) {
   .thnr__text-content .button-main {
     margin: 5px 1%;
     padding: 10px 30px;
     font-size: 14px; }
-  .thnr__header .button {
-    margin: 5px 2%;
-    padding: 5px 20px; }
   .thnr__text-content {
     padding-left: 10%;
     top: 30%; }
@@ -315,7 +385,50 @@ body {
     padding-right: 0; }
   .thnr__info-block {
     width: 90%; }
-  .thnr__main-nav {
-    width: 74%; }
-  .thnr__main-logo {
-    width: 20%; } }
+  .thnr__main-text-wrap {
+    max-height: 100%; } }
+
+@media (max-width: 767px) {
+  .thnr__main-photo-wrap {
+    width: 100%; }
+  .thnr__main-photo {
+    width: 175%;
+    height: 100%;
+    background-size: 175%;
+    background-repeat: no-repeat;
+    background-position: 70% 0; }
+  .thnr__main-photo-shadow {
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: inset 0px 0px 70px 10px #000; }
+  .thnr__main-text-wrap {
+    position: absolute;
+    width: 100%; }
+  .thnr__text-content {
+    padding: 0;
+    top: 20%; }
+    .thnr__text-content .thnr__main-logo {
+      display: none; }
+    .thnr__text-content .button-main {
+      padding: 12px 40px;
+      font-size: 18px;
+      background-color: rgba(0, 0, 0, 0.6);
+      min-width: 250px; }
+  .thnr__main-quote {
+    bottom: 60px;
+    text-shadow: 0px 0px 20px #000;
+    width: 85%;
+    right: 0; } }
+
+@media (max-width: 480px) {
+  .thnr__text-content {
+    padding: 0;
+    top: 20%; }
+    .thnr__text-content .button-main {
+      padding: 12px 40px;
+      font-size: 18px;
+      min-width: 80%; }
+  .thnr__main-quote {
+    bottom: 60px;
+    text-shadow: 0px 0px 20px #000;
+    width: 100%;
+    right: 0; } }
