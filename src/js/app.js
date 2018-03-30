@@ -1,6 +1,9 @@
-(() => {
+const Header = require('./modules/header');
 
-    // $('body').append('<div>jQuery works!:)</div>');
+class App {
+    init() {
+        this.headerModule = new Header().init();
+    }
+}
 
-
-})();
+new App().init();
