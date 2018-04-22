@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const BUILD_DIRECTORY = 'build';
 
@@ -13,7 +14,7 @@ const extractAppCSS = new ExtractTextPlugin({ filename: CSS_FILE_MASK });
 module.exports = {
 
     // Watch mode
-    watch: true,
+    watch: false,
 
     entry: {
         vendors: [
@@ -56,6 +57,11 @@ module.exports = {
     plugins: [
         // To clean build directory
         new CleanWebpackPlugin(BUILD_DIRECTORY, {}),
+
+        new CopyWebpackPlugin([{
+            from: __dirname + '/src/img',
+            to: __dirname + '/build/img'
+        }], {}),
 
         // To use existing HTML template
         new HtmlWebpackPlugin({
