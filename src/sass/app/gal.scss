@@ -86,13 +86,13 @@
     background-color: black;
     border: 20px solid transparent;
     &.slick-prev {
-      left: -20px;
+      left: -40px;
       z-index: 100;
       content: '<';
       border-right: 20px solid $color-pink;
     }
     &.slick-next {
-      right: -20px;
+      right: -40px;
       z-index: 100;
       content: '>';
       border-left: 20px solid $color-pink;
