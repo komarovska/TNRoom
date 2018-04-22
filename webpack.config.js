@@ -8,6 +8,8 @@ const BUILD_DIRECTORY = 'build';
 const JS_FILE_MASK = '[name].bundle.[chunkhash].js';
 const CSS_FILE_MASK = '[name].styles.[chunkhash].css';
 
+const extractAppCSS = new ExtractTextPlugin({ filename: CSS_FILE_MASK });
+
 module.exports = {
 
     // Watch mode
@@ -15,25 +17,24 @@ module.exports = {
 
     entry: {
         vendors: [
-            // Lib size: 274Kb
             'jquery',
-
-            // Lib size: 542Kb
             'lodash',
+            'slick-carousel',
         ],
         app: [
             './src/js/app.js',
             './src/sass/app.scss',
+            './node_modules/slick-carousel/slick/slick.scss',
         ],
     },
 
     module: {
         rules: [{
             test: /\.(css|scss)/,
-            use: ExtractTextPlugin.extract([
+            use: extractAppCSS.extract([
                 'css-loader',
                 'sass-loader',
-            ])
+            ]),
         }, {
             test: /\.(png|svg|jpe?g|gif)$/,
             use: [
@@ -44,7 +45,7 @@ module.exports = {
             use: [
                 'file-loader'
             ]
-            }]
+        }]
     },
 
     output: {
@@ -68,6 +69,8 @@ module.exports = {
             jQuery: 'jquery',
             _: 'lodash',
             lodash: 'lodash',
+            slick: 'slick-carousel',
+            'slick-carousel': 'slick-carousel',
         }),
 
         // To load vendors first and exclude it from 'app' bundle
@@ -77,8 +80,6 @@ module.exports = {
         }),
 
         // To build styles
-        new ExtractTextPlugin({
-            filename: CSS_FILE_MASK,
-        }),
+        extractAppCSS,
     ]
 };
