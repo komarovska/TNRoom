@@ -11,7 +11,7 @@ class Carousel {
     initializeCache() {
         this.cache.document = $(document);
         this.cache.body = $('body');
-        this.cache.photoItem = $('.thnr__about__img');
+        this.cache.photoItem = $('.thnr__about__item');
         this.cache.textItem = $('.thnr__about__description');
     }
     initializeEvents() {
@@ -22,13 +22,13 @@ class Carousel {
 
     showMe() {
     
-    var photo = $('.thnr__about__img');
+        var photo = $('.thnr__about__item');
 
-	photo.on('click', function() {
-		photo.removeClass('thnr__about__img_active');
-		$(this).addClass('thnr__about__img_active');
-	})
-}
+        photo.on('click', function() {
+            photo.removeClass('active');
+            $(this).addClass('active');
+        })
+    }
 }
 
 module.exports = Carousel;
