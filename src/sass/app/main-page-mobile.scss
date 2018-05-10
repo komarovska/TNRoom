@@ -43,6 +43,9 @@
 
 @media (max-device-width:768px) and (orientation:portrait) {
   .thnr {
+    &__page {
+      max-height: 2000px;
+    }
     &__main-photo {
       background-size: 200%;
       max-width: 175%;
