@@ -5,6 +5,16 @@
   color: $color-pink;
   &__page {
     position: relative;
+    text-align: center;
+  }
+  &__title {
+    text-align: center;
+    display: inline-block;
+    font-size: 36px;
+    font-weight: 300;
+    padding: 0;
+    margin: 0 auto 20px;
+    border-bottom: 1px solid $color-pink;
   }
 }
 

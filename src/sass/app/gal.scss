@@ -1,6 +1,6 @@
 .thnr {
   &__gallery-page {
-    padding: 10% 30px 0;
+    padding: 8% 30px 0;
     height: 100%;
     box-sizing: border-box;
     width: 100%;
@@ -16,9 +16,9 @@
     overflow: hidden;
   }
   &__slick-for {
-    height: 15%;
+    height: 10%;
     margin: 30px auto;
-    width: 70%;
+    width: 50%;
     background-color: black;
     text-align: center;
     .thnr__gal-item {
@@ -99,7 +99,7 @@
     }
   }
   &-gal-wrap {
-    height: 70%;
+    height: 60%;
     width: 70%;
     margin: 0 auto;
     img {

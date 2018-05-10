@@ -1,42 +1,57 @@
 .thnr__about {
+    padding: 8% 30px 0;
     &__wrap {
-        width: 85%;
-        margin-left: 10%;
-        padding-top: 10%;
+        width: 100%;
+        margin: 0 auto;
+        padding-top: 20px;
     }
     &__item {
         display: inline-block;
         vertical-align: top;
+        padding: 0 5px;
+        box-sizing: border-box;
+        width: calc(90%/6);
         &.active {
+            width: calc((95%/6) + 5%);
             .thnr__about__img {
                 width: 210px;
                 height: 210px;
-                border: 10px solid $color-pink;
+                border: 5px solid $color-pink;
                 -webkit-filter: none;
                 filter: none;
-                margin-right: 20px;
-                margin-left: 20px;
+                margin: 0 auto;
+                transition: .5s;
             }
             .thnr__about__description {
-                font-size: 17px;
-                width: 230px;
-                & > span {
-                    font-size: 19px;
-                    text-align: center;
+                font-size: 14px;
+                width: 100%;
+                transition: .5s;
+            }
+            .thnr__master-name {
+                font-size: 26px;
+                text-align: center;
+                transition: .5s;
+            }
+            .thnr__master-annotation {
+                font-size: 12px;
+            }
+            &:hover {
+                .thnr__img-hover {
+                    display: none;
                 }
             }
         }
     }
     &__description {
+        display: block;
         font-size: 9px;
         width: 120px;
         padding-left: 5px;
         padding-top: 10px;
-        & > span {
-            color: $color-basic-red;
-            font-size: 11px;
-            font-weight: bold;
-        }
+        transition: .5s;
+        text-align: left;
+        max-width: 90%;
+        margin: 0 auto;
     }
     &__img {
         width: 140px;
@@ -45,6 +60,7 @@
         border-radius: 50%;
         -webkit-filter: grayscale(100%); 
         filter: grayscale(100%);
+        transition: .5s;
     }
     
 }
@@ -53,11 +69,57 @@
     &__img-wrap {
         height: 210px;
         position: relative;
+        &:hover {
+            .thnr__img-hover {
+                display: block;
+                transition: .5s;
+            }
+        }
     }
     &__about__img {
         position: absolute;
         bottom: 0;
         right: 0;
         left: 0;
+        margin: 0 auto;
+    }
+    &__img-hover {
+        display: none;
+        position: absolute;
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        background-color: rgba(255, 160, 160, 0.8);
+        color: #333;
+        z-index: 100;
+        bottom: 0px;
+        font-size: 12px;
+        font-weight: 600;
+        cursor: pointer;
+        margin: 0 auto;
+        right: 0;
+        left: 0;
+        span {
+            margin: 0 auto;
+            right: 0;
+            left: 0;
+            max-width: 80%;
+            display: block;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+    &__master-name {
+        display: block;
+        color: $color-basic-red;
+        font-size: 14px;
+        font-weight: bold;
+        transition: .5s;
+        text-align: center;
+    }
+    &__master-annotation {
+        display: block;
+        margin-bottom: 10px;
     }
 }

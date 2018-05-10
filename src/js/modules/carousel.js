@@ -15,19 +15,14 @@ class Carousel {
         this.cache.textItem = $('.thnr__about__description');
     }
     initializeEvents() {
-        this.cache.photoItem.on('click', () => {
-            this.showMe();
-        })
+        this.cache.photoItem.on('click', (e) => {
+            this.showMe(e);
+        });
     }
 
-    showMe() {
-    
-        var photo = $('.thnr__about__item');
-
-        photo.on('click', function() {
-            photo.removeClass('active');
-            $(this).addClass('active');
-        })
+    showMe(e) {
+        this.cache.photoItem.removeClass('active');
+        $(e.target).closest('.thnr__about__item').addClass('active');
     }
 }
 
