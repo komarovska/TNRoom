@@ -1,0 +1,33 @@
+#thnr__map {
+    width: 70%;
+    height: 100%;
+    float: right;
+}
+
+.thnr {
+    &__contact-us {
+        &_container {
+            float: left;
+            width: 30%;
+            height: 100%;
+            padding: 10% 2%;
+            text-align: left;
+            line-height: 1.5;
+        } 
+        &__icon {
+            display: inline-block;
+            margin: 0 1% 0 0;
+        } 
+        &_bold {
+            font-weight: 700;
+        }
+        &__content {
+            display: inline-block;
+            vertical-align: top;
+        }
+    }
+    &__container-small {
+        clear: right;
+    }
+   
+}
