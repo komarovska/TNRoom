@@ -32,7 +32,9 @@ showGoogleMaps() {
         mapTypeControl: false,
         mapTypeId: google.maps.MapTypeId.ROADMAP,
         center: {lat: 50.459085, lng: 30.468437}
+    
     };
+    
     var map = new google.maps.Map(document.getElementById('thnr__map'), mapOptions);
 
    
@@ -61,19 +63,26 @@ var infowindow1 = new google.maps.InfoWindow({
 var infowindow2 = new google.maps.InfoWindow({
             content: contentString2
         });
-    
+var coordinate1 = new google.maps.LatLng(50.45848248, 30.42355523);
 var marker1 = new google.maps.Marker({
-            position: {lat: 50.45848248, lng: 30.42355523},
+            position: coordinate1,
             map: map,
             draggable: false,
             title: '#TheNailRoom'
         });
+var coordinate2 = new google.maps.LatLng(50.44536693, 30.52532868);
 var marker2 = new google.maps.Marker({
-            position: {lat: 50.44536693, lng: 30.52532868},
+            position: coordinate2,
             map: map,
             draggable: false,
             title: '#TheNailRoom'
         });
+
+var bounds = new google.maps.LatLngBounds();
+        bounds.extend(coordinate1);
+        bounds.extend(coordinate2);
+        map.fitBounds(bounds);
+
 marker1.addListener('click', function() {
             infowindow1.open(map, marker1),
             infowindow2.close(map, marker2);
@@ -83,7 +92,10 @@ marker2.addListener('click', function() {
             infowindow1.close(map, marker1);
         });
 
+
 }
+
+
 }
 
 module.exports = Map;

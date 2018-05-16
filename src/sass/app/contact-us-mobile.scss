@@ -1,0 +1,161 @@
+@media (max-width: 990px) {
+#thnr__map {
+        width: 63%;
+}
+
+.thnr {
+    &__contact-us {
+        padding: 11% 1% 1% 2%;
+        &__container {
+            width: 36%;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+        &__title {
+            font-size: 30px;
+            margin-left: 7%;
+        }
+    }
+    
+}  
+
+}
+
+@media (max-width: 768px) {
+    #thnr__map {
+        width: 60%;
+        height: 62%;
+        float: right;
+    
+    }
+
+    .thnr {
+    &__contact-us {
+        padding: 9% 1% 1% 2%;
+        &__container {
+            width: 100%;
+            height: 29%;
+        }
+        &__title {
+            margin: 0 30% 2%;
+            font-size: 30px;
+        }
+        &__content {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+    }
+    &__container-small {
+        font-size: 12px;
+        &__schedule {
+            width: 60%;
+            float: left;
+        }
+        &__address {
+            width: 60%;
+            float: right;
+        }
+        &__phones{
+            width: 30%;
+            float: left;
+            
+        }
+        &__social {
+            width: 60%;
+            float: left;
+
+        }
+}
+
+}
+}
+
+@media (max-width: 600px) {
+
+    /*#thnr__map {
+        width: 70%;
+        height: 62%;
+        float: right;
+    
+    }
+
+    .thnr {
+    &__contact-us {
+        padding: 9% 1% 1% 2%;
+        &_container {
+            width: 100%;
+            height: 29%;
+        }
+        &__title {
+            margin: 0 25% 2%;
+            font-size: 30px;
+        }
+        &__content {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+    }
+    &__container-small {
+        font-size: 12px;
+        &__schedule {
+            width: 60%;
+            float: left;
+        }
+        &__address {
+            width: 45%;
+            float: left;
+        }
+        &__social {
+            float: right;
+            width: 35%;
+
+    }
+}
+
+}*/
+}
+
+@media (max-width: 480px) {
+    .thnr {
+        &__contact-us {
+            padding: 7% 0 1% 1%;
+            &__container {
+                width: 100%;
+                height: 35%;
+            }
+            &__content {
+                font-size: 12px;
+            }
+            }
+            &__title {
+                display: block;
+                font-size: 25px;
+                margin: 0 20% 2%;
+            }
+            &__container-small {
+                &__schedule {
+                    width: 37%;
+                    float: right;
+                }
+                &__address {
+                    width: 60%;
+                    float: left;
+                }
+                &__phones {
+                    width: 60%;
+                    float: left;
+                }
+                &__social {
+                    float: left;
+                    width: 63%;
+
+            }
+        }
+    }
+    #thnr__map {
+        width: 98%;
+        height: 60%;
+  
+    }
+
+}
